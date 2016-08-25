@@ -38,5 +38,8 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+group :development do
+  gem 'test-unit', '~> 3.0'
+end
 
 gem 'haml-rails'
