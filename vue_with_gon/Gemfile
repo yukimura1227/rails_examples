@@ -58,5 +58,7 @@ group :development do
   gem 'rails-flog', require: 'flog'
   gem 'pry-stack_explorer'
 end
+gem 'haml-rails'
+gem 'erb2haml'
 
 gem 'gon'
