@@ -6,6 +6,10 @@
 %p
   %b Contents:
   = @blog.contents
+%p
+  %b Image:
+  -#= image_tag @blog.image.url(:large)
+  = image_tag @blog.image.s3_object(:thumb).url_for(:read, secure: true)
 
 = link_to 'Edit', edit_blog_path(@blog)
 \|
