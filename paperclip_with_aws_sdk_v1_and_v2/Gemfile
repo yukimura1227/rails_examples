@@ -44,4 +44,18 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
+group :development do
+  gem 'hirb'
+  gem 'hirb-unicode'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'awesome_print'
+  gem 'quiet_assets'
+  gem 'rails-flog', require: 'flog'
+  gem 'pry-stack_explorer'
+end
+gem 'haml-rails'
+gem 'erb2haml'
