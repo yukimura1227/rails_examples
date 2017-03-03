@@ -1,0 +1,18 @@
+development:
+  bucket: yukimura1227-test-bucket
+  access_key_id: XXXXXX
+  secret_access_key: XXXXXX
+  s3_host_name: s3-ap-northeast-1.amazonaws.com
+
+test:
+  bucket: yukimura1227-test-bucket
+  access_key_id: XXXXXX
+  secret_access_key: XXXXXX
+  s3_host_name: s3-ap-northeast-1.amazonaws.com
+
+production:
+  bucket: yukimura1227-test-bucket
+  access_key_id: XXXXXX
+  secret_access_key: XXXXXX
+  s3_host_name: s3-ap-northeast-1.amazonaws.com
+
