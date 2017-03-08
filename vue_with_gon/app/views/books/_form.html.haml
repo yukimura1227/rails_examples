@@ -6,14 +6,37 @@
         - @book.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :price
-    = f.number_field :price
-  .field
-    = f.label :description
-    = f.text_area :description
-  .actions
-    = f.submit 'Save'
+  #vue_input_area
+    .field
+      = f.label :title
+      -#= f.text_field :title, 'v-model': 'title'
+      %input{'v-model': 'title'}
+    .field
+      = f.label :price
+      = f.number_field :price
+    .field
+      = f.label :description
+      = f.text_area :description
+    .actions
+      = f.submit 'Save'
+
+    #input_mirror
+      {{ title }}
+      #alert_button
+        = button_tag type: 'button', onclick: 'vue_sample.custom_title_alert()' do
+          alert_title
+:coffee
+  window.vue_sample = new Vue(
+    el: '#vue_input_area'
+
+    data:
+      title: "#{@book.title}"
+
+    computed:
+      custom_title: ->
+        return 'hello ' + this.title + ' !!!!!!'
+
+    methods:
+      custom_title_alert: () ->
+        alert this.custom_title
+  )
