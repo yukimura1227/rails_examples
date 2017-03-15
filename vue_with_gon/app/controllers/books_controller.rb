@@ -66,6 +66,7 @@ class BooksController < ApplicationController
     def set_book
       @book = Book.find(params[:id])
       gon.book_title = @book.title
+      gon.book_price = @book.price
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
