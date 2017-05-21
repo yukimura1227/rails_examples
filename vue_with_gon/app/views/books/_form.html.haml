@@ -13,7 +13,10 @@
       %input{'v-model': 'title'}
     .field
       = f.label :price
-      = f.number_field :price
+      %input{'v-model': 'price'}
+    .field
+      = f.label :price_with_tax
+      {{ price_with_tax }}
     .field
       = f.label :description
       = f.text_area :description
@@ -30,11 +33,12 @@
     el: '#vue_input_area'
 
     data:
-      title: "#{@book.title}"
+      title: gon.book_title
+      price: gon.book_price
 
     computed:
-      custom_title: ->
-        return 'hello ' + this.title + ' !!!!!!'
+      price_with_tax: ->
+        return Math.ceil(this.price * 1.08)
 
     methods:
       custom_title_alert: () ->
