@@ -60,5 +60,5 @@ end
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'aws-sdk', '~> 1'
-gem 'aws-sdk-resources', '~> 2'
-gem 'paperclip', '4.3.7'
+# gem 'aws-sdk-resources', '~> 2'
+gem 'paperclip', '5.1.0'
