@@ -1,0 +1,3 @@
+[submodule "wordpress_rails_sso/wordpress"]
+	path = wordpress_rails_sso/wordpress
+	url = https://github.com/vccw-team/vccw.git
