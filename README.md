@@ -1,4 +1,7 @@
 # This is rails_examples
 
-# Usage
-rails new XXXX -m https://raw.githubusercontent.com/yukimura1227/rails_template/master/template.rb
+## Usage
+
+```
+git clone --recursive git@github.com:yukimura1227/rails_examples.git
+```
