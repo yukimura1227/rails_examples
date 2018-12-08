@@ -97,3 +97,6 @@ group :test do
   gem 'timecop'
   gem 'codecov', require: false, group: :test
 end
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-wordpress_hosted', github: 'jwickard/omniauth-wordpress-oauth2-plugin'
