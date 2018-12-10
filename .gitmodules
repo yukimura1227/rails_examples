@@ -3,4 +3,4 @@
 	url = https://github.com/vccw-team/vccw.git
 [submodule "vagrant_sandbox"]
 	path = vagrant_sandbox
-	url = git@github.com:yukimura1227/vagrant_sandbox.git
+	url = https://github.com/yukimura1227/vagrant_sandbox.git
