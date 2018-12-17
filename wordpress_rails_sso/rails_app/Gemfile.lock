@@ -9,9 +9,8 @@ GIT
       tilt
 
 GIT
-  remote: https://github.com/jwickard/omniauth-wordpress-oauth2-plugin.git
+  remote: https://github.com/bkno/omniauth-wordpress-oauth2-plugin.git
   revision: 8f0d6fba970d96f2bb2244a3ac678656137ed295
-  ref: 8f0d6fba970d96f2bb2244a3ac678656137ed295
   specs:
     omniauth-wordpress_hosted (0.0.3)
       omniauth-oauth2
