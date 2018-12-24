@@ -16,7 +16,7 @@ class User < ApplicationRecord
       return signed_in_user
     else
       #find user by id and provider.
-      user = User.find_by_provider_and_uid(oauth['provider'], oauth['uid'])
+      user = User.where(provider: oauth['provider'], uid: oauth['uid']).first
 
       #if user isn't in our dabase yet, create it!
       if user.nil?
