@@ -262,7 +262,8 @@ Devise.setup do |config|
       '6687cead1a23f0b36179', # Secret
       strategy_class: OmniAuth::Strategies::WordpressHosted,
       client_options: {
-        site: 'http://vccw.test'
+        site: 'http://vccw.test',
+        token_url: 'http://vccw.test/oauth/request_token'
       }
 
   # ==> Warden configuration
