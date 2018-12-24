@@ -4,6 +4,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable
 
+  # providerがある場合 (ex) woredpress経由で認証した等）は、
+  # passwordは要求しないようにする。
+  def password_required?
+    super && provider.blank?
+  end
+
   def self.find_for_wordpress_oauth2(oauth, signed_in_user=nil)
     #if the user was already signed in / but they navigated through the authorization with wordpress
     if signed_in_user
