@@ -20,9 +20,7 @@ class User < ApplicationRecord
 
       #if user isn't in our dabase yet, create it!
       if user.nil?
-        user = User.create!(email: oauth['info']['email'], uid: oauth['uid'], provider: oauth['provider'],
-                            nickname: oauth['extra']['user_login'], website: oauth['info']['urls']['Website'],
-                            display_name: oauth['extra']['display_name'])
+        user = User.create!(email: oauth['info']['email'], uid: oauth['uid'], provider: oauth['provider'])
       end
 
       user
