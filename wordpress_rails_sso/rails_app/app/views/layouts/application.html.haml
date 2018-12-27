@@ -32,6 +32,13 @@
             %li= link_to "Link 2", "/path2"
             %li= link_to "Link 3", "/path3"
             %li= link_to "Link 3", "/path3"
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              - unless user_signed_in?
+                %button.uk-navbar-item= link_to 'ログイン', '/users/auth/wordpress_hosted', class: 'navbar-btn'
+              - else
+                = form_tag destroy_user_session_path, method: :delete, class: 'navbar-item' do
+                  =button_tag 'ログアウト', class: 'navbar-btn'
 
     .container
       .row
