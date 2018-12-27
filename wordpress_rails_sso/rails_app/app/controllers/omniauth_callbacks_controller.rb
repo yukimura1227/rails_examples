@@ -1,6 +1,5 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def wordpress_hosted
-    binding.pry
     #You need to implement the method below in your model (e.g. app/models/user.rb)
     @user = User.find_for_wordpress_oauth2(request.env["omniauth.auth"], current_user)
 
